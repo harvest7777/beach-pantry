@@ -16,7 +16,7 @@ const ProductDisplay: React.FC<ProductDisplayProps> = ({ product }) => {
       </div>
       <h1 className="font-bold">{product.name}</h1>
       <h2>Quantity: {product.quantity}</h2>
-      <span onClick={() => setVisible(true)} className="flex gap-x-2 items-center ">
+      <span onClick={() => setVisible(true)} className="hover:cursor-pointer flex gap-x-2 items-center ">
         <BsInfoCircle />
         More info
       </span>

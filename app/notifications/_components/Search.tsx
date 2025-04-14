@@ -43,29 +43,33 @@ export default function Search() {
 
   const selectedProducts = products.filter((product) => idList.includes(product.id));
   return (
-    <div>
+    <div className="w-full">
       {/* users selected products */}
       <section>
-        <h2>You will be notified when we restock...</h2>
-        <ul className="flex gap-x-2">
+        <h2 className="italic">You will be notified when we restock...</h2>
+        <ul className="flex flex-wrap gap-y-2 gap-x-2 outline-1 outline-muted p-2 rounded-xl">
+          {selectedProducts.length === 0 && <p>Nothing selected, add products below!</p>}
           {selectedProducts.map((product) => (
-            <li key={product.id} className="flex gap-x-2">
+            <li key={product.id} className="bg-gray-300 rounded-xl pl-2 p-1 flex gap-x-2">
               {product.name}
-              <button onClick={() => handleRemove(product.id)}><FaRegTrashCan /></button>
+              <button className="!outline-0" onClick={() => handleRemove(product.id)}><FaRegTrashCan /></button>
             </li>
           ))}
         </ul>
       </section>
-      <label>Select a product: </label>
-      <select value={selectedId} onChange={handleSelect}>
-        <option value="">-- Choose a product --</option>
-        {products.map((product) => (
-          <option key={product.id} value={product.id}>
-            {product.name}
-          </option>
-        ))}
-      </select>
-      <button onClick={() => handleSave()}>save</button>
+
+      <p className="mt-5 italic">Add products to notification list</p>
+      <div className="flex gap-x-5 itens-center align-middle">
+        <select className="bg-gray-300 rounded-xl px-2" value={selectedId} onChange={handleSelect}>
+          <option value="">-- Choose a product --</option>
+          {products.map((product) => (
+            <option key={product.id} value={product.id}>
+              {product.name}
+            </option>
+          ))}
+        </select>
+        <button onClick={() => handleSave()}>Add</button>
+      </div>
     </div>
   );
 }

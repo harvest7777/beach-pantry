@@ -19,10 +19,10 @@ const Restock: React.FC<RestockProps> = ({ nextStock, lastStock }) => {
     hour12: true
   });
   return (
-    <>
+    <div className="text-lg">
       <p>Next Restock: {formattedNextStock}</p>
       <p>Last Restock: {formattedLastStock}</p>
-    </>
+    </div>
   )
 }
 

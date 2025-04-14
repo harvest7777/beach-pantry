@@ -44,7 +44,6 @@ export default function InventoryPage() {
       {/* search */}
       <section className="mt-5 flex justify-between gap-x-2">
         <input
-          className='rounded-xl px-2 flex-1 outline-1 outline-muted'
           type="text"
           placeholder="ex: eggs"
           value={input}

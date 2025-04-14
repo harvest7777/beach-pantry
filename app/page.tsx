@@ -4,20 +4,23 @@ import PantrySchedule from "./_landing_components/Schedule";
 import Image from "next/image";
 
 export default function Home() {
-  let date = new Date();
-  date.setHours(14);
-  const nextStock = date;
-  date.setDate(date.getDate() - 1);
-  const lastStock = date;
+  const nextStock = new Date();
+  nextStock.setHours(20);
+  nextStock.setMinutes(0);
+
+  const lastStock = new Date();
+  lastStock.setHours(13);
+  lastStock.setMinutes(30);
+  lastStock.setDate(lastStock.getDate() - 1);
 
   return (
     <>
       <Title>Beach Pantry Stock</Title>
       {/* entire page */}
-      <section className="flex">
+      <section className="flex gap-x-20 justify-center">
         <section className="w-1/2 flex flex-col">
           <Restock lastStock={lastStock} nextStock={nextStock} />
-          <div className="w-1/2 aspect-[16/9] relative">
+          <div className="w-full aspect-[16/9] relative overflow-hidden rounded-xl">
             <Image
               className="object-cover"
               src="/pantry_map.png"
@@ -26,7 +29,9 @@ export default function Home() {
             />
           </div>
         </section>
-        <PantrySchedule />
+        <section className="w-1/3">
+          <PantrySchedule />
+        </section>
       </section>
 
     </>

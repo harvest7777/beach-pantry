@@ -37,3 +37,7 @@ button {
 h1 {
   @apply font-bold;
 }
+
+input {
+  @apply rounded-xl px-2 outline-1 outline-muted;
+}
