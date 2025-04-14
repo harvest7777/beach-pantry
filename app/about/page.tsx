@@ -30,11 +30,11 @@ export default function AboutPage() {
         <section className="md:w-1/2 md:order-2 order-1">
           <article>
             <p>
-              The Laurén Chalmers '83 Beach Pantry operates as the official food pantry for Long Beach State University (LBSU) students. The pantry provides food items for students in need. An initiative spanning two ASI executive administrations, 2015 ASI Vice President Miriam Hernández and 2016 ASI Vice President Logan Vournas spearheaded the food pantry project into fruition in fall 2016. Also housed in the Laurén Chalmers '83 Beach Pantry will be the Student Swap Shop program, aimed at providing students with the opportunity to swap unneeded or old school supplies, like books, notebooks and other items essential to education.
+              The Laurén Chalmers &#39;83 Beach Pantry operates as the official food pantry for Long Beach State University (LBSU) students. The pantry provides food items for students in need. An initiative spanning two ASI executive administrations, 2015 ASI Vice President Miriam Hernández and 2016 ASI Vice President Logan Vournas spearheaded the food pantry project into fruition in fall 2016. Also housed in the Laurén Chalmers &#39;83 Beach Pantry will be the Student Swap Shop program, aimed at providing students with the opportunity to swap unneeded or old school supplies, like books, notebooks and other items essential to education.
             </p>
           </article>
           <article className="mt-10">
-            <p>Students can use the Laurén Chalmers '83 Beach Pantry three times a week and receive no more than five items* per visit.</p>
+            <p>Students can use the Laurén Chalmers &#39;83 Beach Pantry three times a week and receive no more than five items* per visit.</p>
             <p>*It is highly encouraged to take an assortment of items for a well-balanced meal.</p>
             <p>For questions, please email asi-pantry@csulb.edu.</p>
           </article>
@@ -43,3 +43,4 @@ export default function AboutPage() {
     </div>
   )
 }
+
