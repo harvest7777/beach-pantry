@@ -56,7 +56,7 @@ export default function NotificationFields() {
           <button className="flex-1" onClick={() => handleOptInPhone()}>Opt In</button>
         </div>
         {phoneError && <p className="errorMessage">{phoneError}</p>}
-        {phoneSuccess && <p className="errorMessage">{phoneSuccess}</p>}
+        {phoneSuccess && <p className="text-emerald-500 text-sm">{phoneSuccess}</p>}
       </div>
       <div>
         <label>Email Notifications</label>
@@ -76,7 +76,7 @@ export default function NotificationFields() {
           <button className="flex-1" onClick={() => handleOptInEmail()}>Opt In</button>
         </div>
         {emailError && <p className="errorMessage">{emailError}</p>}
-        {emailSuccess && <p className="errorMessage">{emailSuccess}</p>}
+        {emailSuccess && <p className="text-emerald-500 text-sm">{emailSuccess}</p>}
       </div>
     </div>
   );
