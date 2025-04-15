@@ -2,7 +2,7 @@ import Link from "next/link"
 import Dropdown from "./Dropdown"
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-between h-16 items-center px-5 bg-primary">
+    <div className="w-full flex justify-between h-16 items-center px-5 bg-primary text-xl font-bold">
       <Link href="/">Home</Link>
       <div className="md:flex hidden gap-x-5">
         <Link href="/notifications">Notifications</Link>
