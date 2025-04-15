@@ -17,8 +17,8 @@ export default function Home() {
     <>
       <Title>Beach Pantry Stock</Title>
       {/* entire page */}
-      <section className="flex gap-x-20 justify-center">
-        <section className="w-1/2 flex flex-col">
+      <section className="md:flex-row flex-col flex gap-x-20 gap-y-10 justify-center">
+        <section className="md:w-1/2 flex flex-col  md:order-1 order-2">
           <Restock lastStock={lastStock} nextStock={nextStock} />
           <div className="w-full aspect-[16/9] relative overflow-hidden rounded-xl">
             <Image
@@ -29,7 +29,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="w-1/3">
+        <section className="md:w-1/3 md:order-2 order-1">
           <PantrySchedule />
         </section>
       </section>

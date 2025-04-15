@@ -84,7 +84,7 @@ export default function InventoryPage() {
 
       {/* filter display */}
       < ul className='flex gap-x-2 mt-2 mb-5' >
-        <p>applied filters: </p>
+        <p>Applied filters: </p>
         {Object.values(filters).filter(Boolean).length === 0 && <li>None</li>}
         {
           Object.entries(filters).map(([key, enabled]) => (
