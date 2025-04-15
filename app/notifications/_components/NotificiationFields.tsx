@@ -14,10 +14,12 @@ export default function NotificationFields() {
     const isValidPhone: boolean = /^\d{3}-\d{3}-\d{4}$/.test(phone);
     if (!isValidPhone) {
       setPhoneError("Invalid format. Must be ###-###-####");
+      setPhoneSuccess("");
       setTimeout(() => setPhoneError(""), 3000); // clear message after 3 seconds
       return;
     } else setPhoneError("");
     setPhoneSuccess("Successfully opted in!");
+    setPhoneError("");
     setTimeout(() => setPhoneSuccess(""), 3000); // clear message after 3 seconds
 
   }
@@ -27,10 +29,12 @@ export default function NotificationFields() {
     const isValidEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
     if (!isValidEmail) {
       setEmailError("Invalid format. Must be emailname@domain.tld");
+      setEmailSuccess("");
       setTimeout(() => setEmailError(""), 3000); // clear message after 3 seconds
       return;
     } else setEmailError("");
     setEmailSuccess("Successfully opted in!");
+    setEmailError("");
     setTimeout(() => setEmailSuccess(""), 3000); // clear message after 3 seconds
 
   }
