@@ -26,7 +26,7 @@ export default function NotificationFields() {
   const handleOptInEmail = () => {
     const isValidEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
     if (!isValidEmail) {
-      setEmailError("Invalid format. Must be xxxxx@yyy.zzz");
+      setEmailError("Invalid format. Must be emailname@domain.tld");
       setTimeout(() => setEmailError(""), 3000); // clear message after 3 seconds
       return;
     } else setEmailError("");
